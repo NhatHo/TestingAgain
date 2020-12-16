@@ -53,8 +53,8 @@ function* storeData() {
 }
 
 function* retrieveData() {
-  const itemLists = retrieve(KEY)
-  const generatedItems = JSON.parse(itemLists) || []
+  const itemLists = retrieve(KEY) || '[]'
+  const generatedItems = JSON.parse(itemLists)
   yield put({ type: RETRIEVE_DATA, generatedItems })
 }
 
