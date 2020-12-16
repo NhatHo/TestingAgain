@@ -166,7 +166,7 @@ const ItemList = () => {
         )}
       </div>
 
-      {!atBottom && (
+      {!atBottom && itemCount > 0 && (
         <Tooltip title='Scroll To Bottom'>
           <Fab
             size='large'
